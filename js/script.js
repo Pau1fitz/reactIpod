@@ -30,7 +30,7 @@ var App = React.createClass({
 	},
 
 	increaseSongIndex: function() {
-	    if(this.state.activeSong === 4) {
+	    if(this.state.activeSong === this.state.songs.length - 1) {
 	        this.setState({activeSong : 0});
 	    }else{
 	    	this.setState({activeSong : this.state.activeSong + 1});	
