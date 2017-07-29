@@ -4,9 +4,9 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: #4776E6;
-    background-image: linear-gradient(to left, #4776E6, #8E54E9);
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
+  background-image: linear-gradient(to left, #4776E6, #8E54E9);
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
 }
 
 h2, p {
