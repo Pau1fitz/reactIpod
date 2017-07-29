@@ -46,7 +46,7 @@ var App = React.createClass({
 	},
 
 	getItunesData: function(){
-		var self = this;
+		var that = this;
 		$.ajax({
 			url: 'https://itunes.apple.com/search?term=' + this.state.artists[this.state.active] + '&limit=5' ,
 			method: 'GET',
@@ -54,22 +54,22 @@ var App = React.createClass({
 			success: function(data){
 				this.setState({songData: data.results, songs: []});
 				data.results.map(function(song, index){
-					self.state.songs.push(song.previewUrl)
+					that.state.songs.push(song.previewUrl)
 				})	
 			}.bind(this)
-		})
+		});
 	},
 
 	musicScreen: function(){
 		this.setState({
 			homeScreen: false
-		})
+		});
 	},
 
 	homeScreen: function(){
 		this.setState({
 			homeScreen: true
-		})
+		});
 	},
 
 	audio: new Audio,
